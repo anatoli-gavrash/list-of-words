@@ -6,7 +6,7 @@ import sagas from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 export const store = configureStore({
-  reducer: combineReducers({reducers}),
+  reducer: combineReducers({user: reducers}),
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
 });
 

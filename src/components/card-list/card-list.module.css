@@ -1,0 +1,112 @@
+.cardList {
+  position: relative;
+  width: 300px;
+  padding: 25px 0;
+  transition: width 0.15s linear;
+}
+
+.hide {
+  width: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 25px;
+  left: calc(100%);
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 900;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--color-blue-dark);
+  color: var(--color-blue-light);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: var(--color-orange);
+}
+
+.closeButton:active {
+  color: var(--color-red);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  border-radius: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item:not(:first-of-type) {
+  margin-top: 2px;
+}
+
+.navLink {
+  padding: 15px 35px 15px 15px;
+  flex-grow: 1;
+  text-decoration: none;
+  color: var(--color-blue-light);
+}
+
+.navLink:global(.active) {
+  background-image: var(--gradient-orange-red);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 2.5%;
+}
+
+.navLink:hover {
+  transform-origin: left top;
+  text-decoration: underline;
+  background-color: var(--color-blue-light-transp);
+  color: var(--color-orange) !important;
+}
+
+.navLink:active {
+  background-color: var(--color-blue-light-transp-max);
+  color: var(--color-red) !important;
+}
+
+.navLink span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.link {
+  display: none;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 5px 15px 5px 0;
+  align-items: center;
+}
+
+.link:hover,
+.navLink:hover + .link {
+  display: flex;
+}
+
+.icon {
+  height: 40%;
+  fill: var(--color-blue-light);
+}
+
+.link:hover .icon {
+  fill: var(--color-orange) !important;
+}
+
+.link:active .icon {
+  fill: var(--color-red) !important;
+}

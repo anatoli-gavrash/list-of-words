@@ -1,6 +1,6 @@
 import { EventChannel, eventChannel } from "redux-saga";
 import { Unsubscribe, arrayRemove, arrayUnion, doc, getFirestore, onSnapshot, updateDoc, writeBatch } from "firebase/firestore";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getStorage, listAll, ref, uploadBytes } from "firebase/storage";
 import { firebaseApp } from "../firebase";
 import { randomInteger } from "../utils/utils";
 import type { Card, FetchFirestorePayload } from "../store/store.types";
@@ -75,5 +75,21 @@ export const addImage = async (cardsId: string, image: File): Promise<void> => {
     console.log('Image file added!');
   } catch (error) {
     console.error('Image file has not been added.', error);
+  }
+};
+
+export const getImageLinks = async (): Promise<string[] | undefined> => {
+  try {
+    const storage = getStorage();
+    const imageRef = ref(storage, 'images');
+    const list = await listAll(imageRef);
+    const [imageUrl, imageMedia] = [
+      'https://firebasestorage.googleapis.com/v0/b/lang-lib.appspot.com/o/images%2F',
+      '?alt=media'
+    ];
+    
+    return list.items.map((item) => `${imageUrl}${item.name}${imageMedia}`);
+  } catch (error) {
+    console.error('Couldn\'t get the images.', error);
   }
 };

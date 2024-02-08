@@ -5,16 +5,19 @@ import {
   Route,
   RouterProvider
 } from 'react-router-dom';
-import NodFound from './components/not-found';
 import App from './App';
 import Card from './components/card';
+import CardEdit from './components/card-edit';
+import CardNew from './components/card-new';
 
 const CustomRoute: FC = () => {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<App />}>
-        <Route path=':idCard' element={<Card />} errorElement={<NodFound />}/>
+        <Route path='new-card' element={<CardNew />} />
+        <Route path=':idCard' element={<Card />} />
+        <Route path=':idCard/edit' element={<CardEdit />} />
       </Route>
     )
   );

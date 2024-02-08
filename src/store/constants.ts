@@ -1,0 +1,2 @@
+export const FETCH_FIRESTORE = 'FETCH_FIRESTORE';
+export const ADD_CARDS_LOCAL = 'ADD_CARDS_LOCAL';

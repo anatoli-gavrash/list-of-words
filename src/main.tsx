@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import './firebase';
 import "./index.css";
-import App from "./App";
+import CustomRoute from "./custom-route";
 
 const container = document.getElementById("root")
 
@@ -14,7 +14,7 @@ if (container) {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <CustomRoute />
       </Provider>
     </React.StrictMode>,
   )

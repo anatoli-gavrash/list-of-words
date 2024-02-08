@@ -1,0 +1,51 @@
+.addImageLabel {
+  position: relative;
+  flex-basis: calc(100% / 3);
+  border: 1px solid var(--color-blue-dark);
+  background-color: var(--color-blue-light-ultra);
+  background-image:
+    linear-gradient(transparent 45%, var(--color-blue-dark) 45%, var(--color-blue-dark) 55%, transparent 55%),
+    linear-gradient(90deg, transparent 45%, var(--color-blue-dark) 45%, var(--color-blue-dark) 55%, transparent 55%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-origin: center;
+}
+
+.addImageInput {
+  display: none;
+}
+
+.addImageButton {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  padding: 5px;
+  border: 1px solid var(--color-blue-dark);
+  font-family: "Tahoma", "Arial", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-blue-light-ultra);
+  transform: translate(0, -50%);
+  color: var(--color-blue-dark)
+}
+
+.addImageButton:hover {
+  color: var(--color-orange);
+}
+
+.addImageButton:active {
+  color: var(--color-red);
+}
+
+.addImageLabel:hover {
+  background-image:
+    linear-gradient(transparent 45%, var(--color-orange) 45%, var(--color-orange) 55%, transparent 55%),
+    linear-gradient(90deg, transparent 45%, var(--color-orange) 45%, var(--color-orange) 55%, transparent 55%);
+}
+
+.addImageLabel:active {
+  background-image:
+    linear-gradient(transparent 45%, var(--color-red) 45%, var(--color-red) 55%, transparent 55%),
+    linear-gradient(90deg, transparent 45%, var(--color-red) 45%, var(--color-red) 55%, transparent 55%);
+}

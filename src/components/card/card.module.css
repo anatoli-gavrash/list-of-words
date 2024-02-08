@@ -1,0 +1,109 @@
+.card {
+  margin: 25px 25px 25px 50px;
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.wrapper {
+  padding: 15px 25px 15px 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--color-blue-dark);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  padding-left: 25px;
+  font-size: 32px;
+}
+
+.title span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.delimeter {
+  max-width: 100%;
+  height: 2px;
+  border: none;
+  background-color: var(--color-blue-dark);
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  padding: 15px 25px;
+  border-bottom: 1px solid var(--color-blue-light);
+}
+
+.summary::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  margin-left: 3px;
+  background-image: linear-gradient(45deg, transparent 49%, var(--color-blue-dark) 50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  rotate: 45deg;
+}
+
+.details .summary::marker {
+  content: '';
+}
+
+.details[open] .summary::before {
+  top: -2px;
+  rotate: 135deg;
+  background-image: linear-gradient(45deg, transparent 49%, var(--color-orange) 50%);
+}
+
+.learnWordTitle {
+  display: inline-block;
+}
+
+.detailsWrapper {
+  margin: 10px 0 0 21px;
+}
+
+.translate:not(:first-of-type) {
+  margin-top: 3px;
+}
+
+.translate span {
+  display: inline-block;
+  min-width: 28px;
+  margin-right: 5px;
+}
+
+.link {
+  display: flex;
+  width: 150px;
+  height: 50px;
+  margin-top: 15px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color-blue-dark);
+  text-decoration: none;
+  color: var(--color-blue-light);
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--color-orange);
+}
+
+.link:active {
+  color: var(--color-red);
+}

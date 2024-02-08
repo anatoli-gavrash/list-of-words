@@ -1,0 +1,98 @@
+.titleWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  margin-left: 3px;
+  border: none;
+  background-color: unset;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-blue-dark) 50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  rotate: 45deg;
+  transition: rotate 0.2s ease-in-out;
+}
+
+.wrapper.open .button {
+  rotate: 135deg;
+  background-image: linear-gradient(45deg, transparent 50%, var(--color-orange) 50%);
+}
+
+.learnWordTitle {
+  display: inline-block;
+  padding: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.deleteWord {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  border: none;
+  background-color: unset;
+  background-image:
+    linear-gradient(45deg, transparent 47%, var(--color-blue-dark) 48%, var(--color-blue-dark) 52%, transparent 53%),
+    linear-gradient(135deg, transparent 47%, var(--color-blue-dark) 48%, var(--color-blue-dark) 52%, transparent 53%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-origin: center;
+}
+
+.deleteWord:hover {
+  background-color: var(--color-blue-light-transp-med);
+  background-image:
+    linear-gradient(45deg, transparent 47%, var(--color-orange) 48%, var(--color-orange) 52%, transparent 53%),
+    linear-gradient(135deg, transparent 47%, var(--color-orange) 48%, var(--color-orange) 52%, transparent 53%);
+}
+
+.deleteWord:active {
+  background-image:
+    linear-gradient(45deg, transparent 47%, var(--color-red) 48%, var(--color-red) 52%, transparent 53%),
+    linear-gradient(135deg, transparent 47%, var(--color-red) 48%, var(--color-red) 52%, transparent 53%);
+}
+
+.translateWrapper {
+  overflow: hidden;
+  height: 0;
+  margin: 0;
+}
+
+.wrapper.open .translateWrapper {
+  margin: 10px 0 0 21px;
+  height: auto;
+}
+
+.label {
+  display: block;
+}
+
+.label:not(:first-of-type) {
+  margin-top: 5px;
+}
+
+.label span {
+  display: inline-block;
+  min-width: 28px;
+}
+
+.translate {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.translate:not(:first-of-type) {
+  margin-top: 3px;
+}
+
+.translate span {
+  margin-right: 5px;
+}

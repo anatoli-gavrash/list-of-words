@@ -1,3 +1,8 @@
+import type {
+  ADD_CARDS_LOCAL,
+  FETCH_FIRESTORE
+} from "./constants";
+
 export interface Store {
   user: User | null
 }
@@ -33,3 +38,21 @@ export interface Word {
     ru: string
   }
 }
+
+export interface FetchFirestore {
+  type: typeof FETCH_FIRESTORE
+  payload: FetchFirestorePayload
+}
+
+export interface FetchFirestorePayload {
+  cardsId: string
+}
+
+export interface AddCardsLocal {
+  type: typeof ADD_CARDS_LOCAL
+  payload: AddCardsLocalPayload
+}
+
+export type AddCardsLocalPayload = Card[]
+
+export type StoreActions = FetchFirestore | AddCardsLocal

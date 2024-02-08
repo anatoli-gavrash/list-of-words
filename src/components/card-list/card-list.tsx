@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getCardsSelector } from '../../store/selectors';
@@ -7,7 +7,13 @@ import styles from './card-list.module.css';
 
 const CardList: FC = () => {
   const cards = useSelector(getCardsSelector);
+  const stableListKeys: string[] = useMemo(() => [], []);
   const [isHide, setIsHide] = useState<boolean>(false);
+
+  const createStableKey = (index: number) => {
+    stableListKeys[index] = '' + randomInteger();
+    return stableListKeys[index];
+  };
 
   const handleHideButton = () => {
     setIsHide(!isHide);
@@ -26,7 +32,10 @@ const CardList: FC = () => {
         {cards?.map((card, index) => (
           <li
             className={styles.item}
-            key={`li-${randomInteger()}-${index}`}
+            key={`li-${stableListKeys[index]
+              ? stableListKeys[index]
+              : createStableKey(index)}-${index}`
+            }
             style={{backgroundImage: `url('${card.coverImage}')`}}
           >
             <NavLink
@@ -48,6 +57,9 @@ const CardList: FC = () => {
             </Link>
           </li>
         ))}
+        <li className={styles.item}>
+          <Link className={styles.newCardLink} to={'/new-card'}></Link>
+        </li>
       </ul>
     </section>
   );

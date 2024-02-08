@@ -110,3 +110,32 @@
 .link:active .icon {
   fill: var(--color-red) !important;
 }
+
+.newCardLink {
+  display: inline-block;
+  height: 49px;
+  width: 100%;
+  border: 1px solid var(--color-blue-light);
+  border-radius: 5px;
+  background-color: var(--color-blue-light-transp-max);
+  background-image:
+    linear-gradient(transparent 11px, var(--color-blue-light) 12px, var(--color-blue-light) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-blue-light) 12px, var(--color-blue-light) 14px, transparent 15px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+}
+
+.newCardLink:hover {
+  background-color: var(--color-blue-light-transp-med);
+  background-image:
+    linear-gradient(transparent 11px, var(--color-orange) 12px, var(--color-orange) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-orange) 12px, var(--color-orange) 14px, transparent 15px);
+}
+
+.newCardLink:active {
+  background-color: var(--color-blue-light-transp-med);
+  background-image:
+    linear-gradient(transparent 11px, var(--color-red) 12px, var(--color-red) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-red) 12px, var(--color-red) 14px, transparent 15px);
+}

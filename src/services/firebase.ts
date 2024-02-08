@@ -1,5 +1,7 @@
-import { EventChannel, eventChannel } from "redux-saga";
-import { Unsubscribe, arrayRemove, arrayUnion, doc, getFirestore, onSnapshot, updateDoc, writeBatch } from "firebase/firestore";
+import { eventChannel } from "redux-saga";
+import type { EventChannel } from "redux-saga";
+import { arrayRemove, arrayUnion, doc, getFirestore, onSnapshot, updateDoc, writeBatch } from "firebase/firestore";
+import type { Unsubscribe } from "firebase/firestore";
 import { getStorage, listAll, ref, uploadBytes } from "firebase/storage";
 import { firebaseApp } from "../firebase";
 import { randomInteger } from "../utils/utils";

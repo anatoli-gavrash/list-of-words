@@ -1,6 +1,6 @@
-import { EventChannel } from "redux-saga";
+import type { EventChannel } from "redux-saga";
 import { call, cancelled, put, take, takeEvery } from "redux-saga/effects";
-import { Unsubscribe } from "firebase/firestore";
+import type { Unsubscribe } from "firebase/firestore";
 import { ADD_CARDS_LOCAL, FETCH_FIRESTORE } from "./constants";
 import type { Card, FetchFirestore } from "./store.types";
 import { firestoreChannel } from "../services/firebase";

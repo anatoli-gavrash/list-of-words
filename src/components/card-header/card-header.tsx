@@ -1,4 +1,5 @@
-import { FC, useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import type { FC } from 'react';
 import type { Card, User } from '../../store/store.types';
 import { getImageLinks } from '../../services/firebase';
 import { randomInteger } from '../../utils/utils';

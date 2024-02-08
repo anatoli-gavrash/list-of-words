@@ -1,6 +1,7 @@
-import { FC, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import type { FC } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useAppSelector } from '../../hooks/redux-hook';
 import { getCardsSelector, getUserSelector } from '../../store/selectors';
 import type { Card } from '../../store/store.types';
 import styles from './card-edit.module.css';
@@ -13,8 +14,8 @@ import Loader from '../loader';
 const CardEdit: FC = () => {
   const {idCard} = useParams();
   const navigate = useNavigate();
-  const user = useSelector(getUserSelector);
-  const cards = useSelector(getCardsSelector);
+  const user = useAppSelector(getUserSelector);
+  const cards = useAppSelector(getCardsSelector);
   const card = cards?.[Number(idCard) - 1];
   const [formValues, setFormValues] = useState<Card | null>(null);
 

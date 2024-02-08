@@ -1,5 +1,6 @@
-import { FC, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import type { FC } from 'react';
+import { useAppSelector } from '../../hooks/redux-hook';
 import { useNavigate } from 'react-router-dom';
 import { getUserSelector } from '../../store/selectors';
 import type { Card, Word } from '../../store/store.types';
@@ -37,7 +38,7 @@ const newCard: Card = {
 
 const CardNew: FC = () => {
   const navigate = useNavigate();
-  const user = useSelector(getUserSelector);
+  const user = useAppSelector(getUserSelector);
   const [formValues, setFormValues] = useState<Card | null>(null);
 
   useEffect(() => {

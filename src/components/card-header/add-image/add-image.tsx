@@ -1,4 +1,5 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 import { addImage } from '../../../services/firebase';
 import { fileToBlob } from '../../../utils/utils';
 import styles from './add-image.module.css';

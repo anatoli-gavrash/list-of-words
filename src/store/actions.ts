@@ -2,7 +2,7 @@ import {
   ADD_CARDS_LOCAL,
   FETCH_FIRESTORE,
 } from "./constants";
-import {
+import type {
   AddCardsLocal,
   AddCardsLocalPayload,
   FetchFirestore,

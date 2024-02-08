@@ -1,4 +1,5 @@
-import { FC, useMemo } from 'react';
+import { useMemo } from 'react';
+import type { FC } from 'react';
 import type { Card, Word } from '../../store/store.types';
 import styles from './word-list.module.css';
 import { randomInteger } from '../../utils/utils';

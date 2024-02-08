@@ -1,6 +1,7 @@
-import { FC, useState } from 'react';
+import { useState } from 'react';
+import type { FC } from 'react';
 import styles from './word-item.module.css';
-import { Card, Word } from '../../../store/store.types';
+import type { Card, Word } from '../../../store/store.types';
 
 interface WordItemProps {
   formValues: Card

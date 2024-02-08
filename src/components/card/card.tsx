@@ -1,15 +1,16 @@
-import { FC, useMemo } from 'react';
-import { useSelector } from 'react-redux';
+import { useMemo } from 'react';
+import type { FC } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { getCardsSelector } from '../../store/selectors';
+import { useAppSelector } from '../../hooks/redux-hook';
 import { randomInteger } from '../../utils/utils';
 import styles from './card.module.css';
 import Loader from '../loader';
 import NotFound from '../not-found';
+import { getCardsSelector } from '../../store/selectors';
 
 const Card: FC = () => {
   const {idCard} = useParams();
-  const cards = useSelector(getCardsSelector);
+  const cards = useAppSelector(getCardsSelector);
   const stableListKeys: string[] = useMemo(() => [], []);
   const card = cards?.[Number(idCard) - 1];
 

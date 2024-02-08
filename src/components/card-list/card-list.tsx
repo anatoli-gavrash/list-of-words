@@ -1,12 +1,13 @@
-import { FC, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+import type { FC } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useAppSelector } from '../../hooks/redux-hook';
 import { getCardsSelector } from '../../store/selectors';
 import { randomInteger } from '../../utils/utils';
 import styles from './card-list.module.css';
 
 const CardList: FC = () => {
-  const cards = useSelector(getCardsSelector);
+  const cards = useAppSelector(getCardsSelector);
   const stableListKeys: string[] = useMemo(() => [], []);
   const [isHide, setIsHide] = useState<boolean>(false);
 

@@ -1,5 +1,5 @@
 import { createDraftSafeSelector } from "@reduxjs/toolkit";
-import { Store } from "./store.types";
+import type { Store } from "./store.types";
 
 const getUser = (state: Store) => state.user;
 const getCardsId = (state: Store) => state.user?.cardsId;

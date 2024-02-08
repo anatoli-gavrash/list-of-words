@@ -1,4 +1,4 @@
-import {
+import type {
   ADD_CARDS_LOCAL,
   FETCH_FIRESTORE
 } from "./constants";
@@ -53,8 +53,6 @@ export interface AddCardsLocal {
   payload: AddCardsLocalPayload
 }
 
-export interface AddCardsLocalPayload {
-  cards: Card[]
-}
+export type AddCardsLocalPayload = Card[]
 
 export type StoreActions = FetchFirestore | AddCardsLocal

@@ -1,0 +1,22 @@
+.header {
+  height: 72px;
+  border-bottom: 3px solid var(--color-orange);
+  background-color: var(--color-blue-dark);
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--color-blue-light-ultra);
+}
+
+.aside {
+  background-color: var(--color-blue-dark);
+}
+
+.footer {
+  margin-top: auto;
+  height: 72px;
+  border-top: 3px solid var(--color-orange);
+  background-color: var(--color-blue-dark);
+}

@@ -1,0 +1,39 @@
+.wordList {
+  list-style: none;
+}
+
+.wordList input::placeholder {
+  color: var(--color-blue-light);
+}
+
+.item {
+  padding: 7px 25px;
+  border-bottom: 1px solid var(--color-blue-light);
+}
+
+.addButton {
+  width: 100%;
+  max-width: 277px;
+  height: 39px;
+  margin-left: 23px;
+  border: none;
+  background-color: var(--color-blue-light-transp-med);
+  background-image:
+    linear-gradient(transparent 11px, var(--color-blue-dark) 12px, var(--color-blue-dark) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-blue-dark) 12px, var(--color-blue-dark) 14px, transparent 15px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+}
+
+.addButton:hover {
+  background-image:
+    linear-gradient(transparent 11px, var(--color-orange) 12px, var(--color-orange) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-orange) 12px, var(--color-orange) 14px, transparent 15px);
+}
+
+.addButton:active {
+  background-image:
+    linear-gradient(transparent 11px, var(--color-red) 12px, var(--color-red) 14px, transparent 15px),
+    linear-gradient(90deg, transparent 11px, var(--color-red) 12px, var(--color-red) 14px, transparent 15px);
+}

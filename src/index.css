@@ -1,0 +1,43 @@
+:root {
+  --color-blue: rgb(36, 43, 70);
+  --color-blue-dark: rgb(32, 37, 62);
+  --color-blue-light: rgb(133, 138, 159);
+  --color-blue-light-ultra: rgb(184, 191, 219);
+  --color-blue-light-transp: rgba(133, 138, 159, 0.1);
+  --color-blue-light-transp-low: rgba(133, 138, 159, 0.8);
+  --color-blue-light-transp-med: rgba(133, 138, 159, 0.3);
+  --color-blue-light-transp-max: rgba(133, 138, 159, 0.06);
+  --color-orange: rgb(236, 73, 33);
+  --color-red: rgb(238, 32, 69);
+  
+  --gradient-orange-red: linear-gradient(var(--color-orange), var(--color-red));
+}
+
+*,
+*:before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline-color: var(--color-orange);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Tahoma", "Arial", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--color-blue-dark);
+}

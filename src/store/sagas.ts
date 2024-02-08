@@ -13,7 +13,7 @@ function* fetchFirestore({payload}: FetchFirestore) {
       const data: Card[] = yield take(channel);
       yield put({type: ADD_CARDS_LOCAL, payload: data});
       
-      console.log('Data is updated.', data);
+      console.log('Data is updated.');
     }
   } finally {
     const val: boolean = yield cancelled();
